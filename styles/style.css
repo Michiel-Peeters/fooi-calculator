@@ -200,7 +200,7 @@ h1::after {
   max-width: 924px;
   margin: 0 auto;
   min-height: 100px;
-  background-color: #f4fafa;
+  background-color: white;
   border: 2px solid #7f9c9f;
   border-radius: 20px;
   border-top: none;
@@ -213,11 +213,148 @@ h1::after {
 
 .options {
   width: calc(50% - 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+}
+.options__title {
+  font-size: 14px;
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.options__input {
+  width: 100%;
+  padding: 13px;
+  padding-left: 35px;
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline-color: #26c0ab;
+  text-align: right;
+  font-size: 18px;
+  color: #00494d;
+  font-weight: 700;
+}
+.options span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.options span::before {
+  position: absolute;
+  content: "\e900";
+  font-family: icons;
+  font-size: 18px;
+  color: #5e7a7d;
+  margin-left: 13px;
+}
+.options span.personicon::before {
+  content: "\e901";
+}
+.options span:nth-of-type(2)::before {
+  content: "\e902";
+}
+.options__tip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.options__tip__button {
+  flex-basis: 115px;
+  flex-grow: 1;
+  background-color: #00494d;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+}
+.options__tip__button--active {
+  background-color: #c5e4e7;
+}
+.options__tip__button:hover {
+  background-color: #26c0ab;
+}
+.options__tip__input {
+  width: 115px;
+  flex-grow: 1;
+  text-align: right;
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #00494d;
+  outline-color: #26c0ab;
+  padding: 12px;
+}
+.options__tip__input::placeholder {
+  text-align: center;
+}
+.options__people--error .split {
+  display: flex;
+  justify-content: space-between;
+}
+.options__people--error p::after {
+  content: "Can't be zero";
+  color: #b38472;
+  font-weight: 700;
+}
+.options__people--error .options__input {
+  border: 2px solid #b38472;
 }
 
 .display {
   background-color: #00494d;
   width: calc(50% - 48px);
+  border-radius: 15px;
+  padding: 60px 40px;
+}
+.display__amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.display__amount__text h2 {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.display__amount__text p {
+  color: #7f9c9f;
+  font-size: 12px;
+}
+.display__amount__money {
+  font-size: 38px;
+  color: #26c0ab;
+  display: flex;
+  font-weight: 700;
+}
+.display__amount__money::before {
+  content: "\e900";
+  font-family: icons;
+}
+.display__button {
+  width: 100%;
+  font-size: 15px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #c5e4e7;
+  border: none;
+  border-radius: 5px;
+  color: #00494d;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+.display__button--disable {
+  background-color: #0d686d;
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 @use "./base/reset";
 @use "./base/variables" as *;
-@use "./base/fonts";
+@use "./base/fonts" as *;
 @use "./icons/icon";
 
 * {
@@ -31,7 +31,7 @@ h1 {
   max-width: 924px;
   margin: 0 auto;
   min-height: 100px;
-  background-color: $lgcyan2;
+  background-color: white;
   border: 2px solid $dgcyan2;
   border-radius: 20px;
   border-top: none;
@@ -44,9 +44,154 @@ h1 {
 
 .options {
   width: calc(50% - 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+  &__title {
+    font-size: 14px;
+    color: $dgcyan1;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 100%;
+    padding: 13px;
+    padding-left: 35px;
+    background-color: $lgcyan2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline-color: $bcyan;
+    text-align: right;
+    font-size: 18px;
+    color: $vdcyan;
+    font-weight: 700;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span::before {
+    position: absolute;
+    content: "\e900";
+    font-family: icons;
+    font-size: 18px;
+    color: $dgcyan1;
+    margin-left: 13px;
+  }
+  span.personicon::before {
+    content: "\e901";
+  }
+  span:nth-of-type(2)::before {
+    content: "\e902";
+  }
+  &__tip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    &__button {
+      flex-basis: 115px;
+      flex-grow: 1;
+      background-color: $vdcyan;
+      font-size: 18px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 12px;
+      cursor: pointer;
+      &--active {
+        background-color: $lgcyan1;
+      }
+      &:hover {
+        background-color: $bcyan;
+      }
+    }
+    &__input {
+      width: 115px;
+      flex-grow: 1;
+      text-align: right;
+      background-color: $lgcyan2;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      color: $vdcyan;
+      outline-color: $bcyan;
+      padding: 12px;
+      &::placeholder {
+        text-align: center;
+      }
+    }
+  }
+  &__people {
+    &--error {
+      .split {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p::after {
+        content: "Can't be zero";
+        color: $error;
+        font-weight: 700;
+      }
+
+      .options__input {
+        border: 2px solid $error;
+      }
+    }
+  }
 }
 
 .display {
   background-color: $vdcyan;
   width: calc(50% - 48px);
+  border-radius: 15px;
+  padding: 60px 40px;
+  &__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    &__text {
+      h2 {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      p {
+        color: $dgcyan2;
+        font-size: 12px;
+      }
+    }
+    &__money {
+      font-size: 38px;
+      color: $bcyan;
+      display: flex;
+      font-weight: 700;
+      &::before {
+        content: "\e900";
+        font-family: icons;
+      }
+    }
+  }
+  &__button {
+    width: 100%;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 80px;
+    background-color: $lgcyan1;
+    border: none;
+    border-radius: 5px;
+    color: $vdcyan;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    &--disable {
+      background-color: $disable;
+      cursor: not-allowed;
+    }
+  }
 }
