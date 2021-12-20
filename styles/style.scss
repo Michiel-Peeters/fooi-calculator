@@ -10,7 +10,7 @@
 body {
   font-family: "Space Mono";
   background-color: $lgcyan1;
-  padding: 160px;
+  padding: 160px 0;
 }
 
 h1 {
@@ -29,6 +29,7 @@ h1 {
 
 .container {
   max-width: 924px;
+  width: 99%;
   margin: 0 auto;
   min-height: 100px;
   background-color: white;
@@ -182,7 +183,7 @@ h1 {
     font-size: 15px;
     padding: 20px;
     margin-top: 80px;
-    background-color: $lgcyan1;
+    background-color: $bcyan;
     border: none;
     border-radius: 5px;
     color: $vdcyan;
@@ -193,5 +194,29 @@ h1 {
       background-color: $disable;
       cursor: not-allowed;
     }
+    &--active {
+      background-color: $lgcyan1;
+    }
+  }
+}
+
+@media screen and(max-width: 820px) {
+  body {
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .options {
+    width: 100%;
+  }
+  .display {
+    width: 100%;
   }
 }

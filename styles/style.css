@@ -179,7 +179,7 @@ s [class^=icon-],
 body {
   font-family: "Space Mono";
   background-color: #c5e4e7;
-  padding: 160px;
+  padding: 160px 0;
 }
 
 h1 {
@@ -198,6 +198,7 @@ h1::after {
 
 .container {
   max-width: 924px;
+  width: 99%;
   margin: 0 auto;
   min-height: 100px;
   background-color: white;
@@ -344,7 +345,7 @@ h1::after {
   font-size: 15px;
   padding: 20px;
   margin-top: 80px;
-  background-color: #c5e4e7;
+  background-color: #26c0ab;
   border: none;
   border-radius: 5px;
   color: #00494d;
@@ -355,6 +356,32 @@ h1::after {
 .display__button--disable {
   background-color: #0d686d;
   cursor: not-allowed;
+}
+.display__button--active {
+  background-color: #c5e4e7;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .options {
+    width: 100%;
+  }
+
+  .display {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
