@@ -1,0 +1,52 @@
+@use "./base/reset";
+@use "./base/variables" as *;
+@use "./base/fonts";
+@use "./icons/icon";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+  background-color: $lgcyan1;
+  padding: 160px;
+}
+
+h1 {
+  font-size: 55px;
+  color: $vdcyan;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 88px;
+  &::after {
+    content: "\e902";
+    font-family: icons;
+  }
+}
+
+.container {
+  max-width: 924px;
+  margin: 0 auto;
+  min-height: 100px;
+  background-color: $lgcyan2;
+  border: 2px solid $dgcyan2;
+  border-radius: 20px;
+  border-top: none;
+  padding: 32px;
+  padding-left: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.options {
+  width: calc(50% - 48px);
+}
+
+.display {
+  background-color: $vdcyan;
+  width: calc(50% - 48px);
+}
