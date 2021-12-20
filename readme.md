@@ -4,7 +4,7 @@
 
 ## Surge-Website
 
-[Splitter](https://michiel_peeters_scss.surge.sh/) --> bekijken van website design
+[Fooi-Calculator](https://michiel_peeters_scss.surge.sh/) --> bekijken van website design
 
 ## Icons
 
