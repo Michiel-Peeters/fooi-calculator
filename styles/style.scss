@@ -218,4 +218,11 @@ h1 {
   .display {
     width: 100%;
   }
+
+  @media screen and(max-width: 400px) {
+    .display__amount {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+  }
 }
